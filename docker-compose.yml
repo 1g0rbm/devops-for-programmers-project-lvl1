@@ -4,8 +4,7 @@ services:
 
   app:
     build:
-      context: ./app
-      dockerfile: Dockerfile
-    volumes:
-      - ./app:/app
+      context: .
+      dockerfile: Dockerfile.production
+    image: 1g0rbm/devops-for-programmers-project-lvl1
     command: make test

@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  APP_DOCKER_IMAGE_NAME: 1g0rbm/devops-for-programmers-project-lvl1
+
 jobs:
   build:
     runs-on: ubuntu-latest

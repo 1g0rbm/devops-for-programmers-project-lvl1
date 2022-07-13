@@ -1,5 +1,5 @@
 start-dev:
-	docker-compose up -d
+	docker-compose --env-file ./app/.env up -d
 
 stop-dev:
 	docker-compose down --remove-orphans

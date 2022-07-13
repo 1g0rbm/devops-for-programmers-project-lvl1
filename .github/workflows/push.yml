@@ -10,6 +10,8 @@ env:
   DATABASE_PASSWORD: test
   DATABASE_USERNAME: test
   DATABASE_NAME: test
+  DATABASE_PORT: 5432
+  DATABASE_HOST: db
 
 jobs:
   build:

@@ -26,5 +26,4 @@ services:
 
 volumes:
   hexlet_devops_project_1_caddy_data:
-    external: true
   caddy_config:

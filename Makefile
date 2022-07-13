@@ -1,20 +1,20 @@
 start-dev:
-	docker-compose --env-file ./app/.env up -d
+	docker-compose up -d
 
 stop-dev:
-	docker-compose --env-file ./app/.env down --remove-orphans
+	docker-compose down --remove-orphans
 
-test:
-	docker-compose -f docker-compose.yml --env-file ./app/.env up --abort-on-container-exit
+ci:
+	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 start:
 	docker run -p 8080:8080 1g0rbm/devops-for-programmers-project-lvl1 npm run dev
 
 build:
-	docker build -t 1g0rbm/devops-for-programmers-project-lvl1 -f Dockerfile.production .
+	docker-compose -f docker-compose.yml build app
 
 push:
-	docker push 1g0rbm/devops-for-programmers-project-lvl1
+	docker-compose -f docker-compose.yml push app
 
 create-env:
-	cp ./app/.env.example ./app/.env
+	cp .env.example .env

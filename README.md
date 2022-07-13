@@ -7,6 +7,9 @@
 ### Commands
 
 ```sh
+  # create .env
+  make create-env
+
   # run test with production environment
   make ci
 
@@ -18,7 +21,4 @@
 
   # run production app
   make start
-
-  # create .env
-  make create-env
 ```

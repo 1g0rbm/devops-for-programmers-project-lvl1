@@ -14,7 +14,7 @@ build:
 	docker build -t 1g0rbm/devops-for-programmers-project-lvl1 -f Dockerfile.production .
 
 push:
-	docker-compose -f docker-compose.yml --env-file ./app/.env push app
+	docker push 1g0rbm/devops-for-programmers-project-lvl1
 
 create-env:
 	cp ./app/.env.example ./app/.env

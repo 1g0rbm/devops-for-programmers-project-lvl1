@@ -7,6 +7,9 @@ on:
 
 env:
   APP_DOCKER_IMAGE_NAME: 1g0rbm/devops-for-programmers-project-lvl1
+  DATABASE_PASSWORD: test
+  DATABASE_USERNAME: test
+  DATABASE_NAME: test
 
 jobs:
   build:

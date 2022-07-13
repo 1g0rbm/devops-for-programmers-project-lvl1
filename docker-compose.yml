@@ -7,8 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile.production
     environment:
-      POSTGRES_HOST: ${DATABASE_HOST}
-      POSTGRES_PORT: ${DATABASE_PORT}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
     image: 1g0rbm/devops-for-programmers-project-lvl1
     command: make test
     depends_on:

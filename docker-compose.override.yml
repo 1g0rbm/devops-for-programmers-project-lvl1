@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
 
@@ -11,3 +11,20 @@ services:
     command: npm run dev
     volumes:
       - ./app:/app
+
+  caddy:
+    image: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/app:/srv
+      - hexlet_devops_project_1_caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  hexlet_devops_project_1_caddy_data:
+    external: true
+  caddy_config:

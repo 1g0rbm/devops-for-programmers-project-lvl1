@@ -15,3 +15,6 @@ build:
 
 push:
 	docker-compose -f docker-compose.yml push app
+
+create-env:
+	cp ./app/.env.example ./app/.env

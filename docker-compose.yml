@@ -6,9 +6,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.production
-    environment:
-      DATABASE_HOST: ${DATABASE_HOST}
-      DATABASE_PORT: ${DATABASE_PORT}
     image: 1g0rbm/devops-for-programmers-project-lvl1
     command: make test
     depends_on:

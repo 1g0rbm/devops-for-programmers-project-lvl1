@@ -39,6 +39,9 @@ jobs:
           push: true
           tags: ${{ env.APP_DOCKER_IMAGE_NAME }}:cached
 
+      - name: Create .env file
+        run: make create-env
+
       - name: Run tests
         run: make test
 

@@ -11,7 +11,7 @@ start:
 	docker run -p 8080:8080 1g0rbm/devops-for-programmers-project-lvl1 npm run dev
 
 build:
-	docker-compose -f docker-compose.yml --env-file ./app/.env build app
+	docker build -t 1g0rbm/devops-for-programmers-project-lvl1 -f Dockerfile.production .
 
 push:
 	docker-compose -f docker-compose.yml --env-file ./app/.env push app

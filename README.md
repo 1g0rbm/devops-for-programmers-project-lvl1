@@ -23,4 +23,4 @@
 ```
 
 ### Links
-![Docker image](https://hub.docker.com/repository/docker/1g0rbm/devops-for-programmers-project-lvl1)
+[Docker image](https://hub.docker.com/repository/docker/1g0rbm/devops-for-programmers-project-lvl1)
